@@ -3,6 +3,13 @@ const listItem = (content) => {
   return `<li class="list-group-item">${content}</li>`;
 };
 
+const unorderedList = (items) => {
+  let tag = '<ul class="list-group">';
+  items.forEach((item) => { tag += listItem(item); });
+  tag += "</ul>";
+  return tag;
+};
+
 
 
 module.exports = { listItem, unorderedList }; // Do not remove.
